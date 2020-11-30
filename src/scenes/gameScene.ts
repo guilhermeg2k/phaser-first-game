@@ -13,8 +13,6 @@ class GameScene extends Phaser.Scene {
 
   constructor() {
     super('game');
-    this.score = 0;
-    this.level = 1;
   }
 
   preload() {
@@ -29,6 +27,8 @@ class GameScene extends Phaser.Scene {
   }
 
   create() {
+    this.score = 0;
+    this.level = 1;
     this.cursors = this.input.keyboard.createCursorKeys();
     this.add.image(400, 300, 'sky');
     this.createScenery();
